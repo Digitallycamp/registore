@@ -1,0 +1,206 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #f6f6f6;
+}
+
+nav {
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 80px;
+	padding-right: 80px;
+	background-color: #ffffff;
+	align-items: center;
+}
+
+nav .left span:nth-child(1) {
+	color: blue;
+	font-weight: 900;
+	font-size: 32px;
+}
+nav .left span:nth-child(2) {
+	color: #222222;
+	font-weight: 900;
+}
+
+.right-links {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+.right-links a {
+	background-color: #222222;
+	padding-top: 8px;
+	padding-left: 22px;
+	padding-right: 22px;
+	padding-bottom: 8px;
+	color: #ffffff;
+	border-radius: 40px;
+	text-decoration: none;
+	font-weight: 900;
+}
+
+.right-links a:hover {
+	background-color: #222222cb;
+}
+
+.right-links span:hover {
+	color: orange;
+	cursor: pointer;
+}
+.menu {
+	display: none;
+}
+
+header {
+	display: flex;
+	/* align-items: center; */
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+header .right {
+	flex: 1;
+}
+header .right img {
+	width: 100%;
+}
+header .left {
+	flex: 1;
+	padding-top: 120px;
+}
+header .left h1 {
+	font-size: 72px;
+	text-transform: uppercase;
+}
+header .left p {
+	margin-top: 32px;
+}
+
+header .left a {
+	background-color: #222222;
+	padding-top: 8px;
+	padding-left: 22px;
+	padding-right: 22px;
+	padding-bottom: 8px;
+	color: #ffffff;
+	border-radius: 40px;
+	text-decoration: none;
+	font-weight: 900;
+	margin-top: 32px;
+	display: flex;
+	width: fit-content;
+}
+
+header .left a:hover {
+	background-color: #222222cb;
+}
+main h2 {
+	margin-bottom: 40px;
+	font-size: 40px;
+}
+main {
+	padding: 40px 80px;
+}
+.product-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 24px;
+}
+.product-list .card {
+	width: 100%;
+	background-color: #ffffff;
+	border-radius: 8px;
+	height: fit-content;
+	grid-template-rows: 1fr;
+}
+
+.product-list .card:hover {
+	box-shadow: 0px 0px 4px 2px grey;
+}
+.product-list .card img {
+	width: 100%;
+	height: 223px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.product-list .card a {
+	text-decoration: none;
+	color: #222;
+}
+.product-list .card h3 {
+	margin-top: 16px;
+	font-size: 16px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.product-list .card .meta-data {
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+/** MEDIA QUESRY - RESPONSIVE DESIGN*/
+
+@media only screen and (max-width: 768px) {
+	nav {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	.right-links {
+		display: none;
+	}
+
+	.right-links.toggle {
+		display: flex;
+		flex-direction: column;
+
+		position: absolute;
+		top: 82px;
+		right: 0;
+		background-color: #ffffff;
+		width: 60%;
+		max-width: 160px;
+		padding-top: 64px;
+		padding-bottom: 64px;
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+	.right-links a {
+		font-size: 14px;
+	}
+	.menu {
+		display: block;
+	}
+	.menu button {
+		cursor: pointer;
+	}
+	header {
+		flex-direction: column;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	main {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+	.product-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.product-list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
